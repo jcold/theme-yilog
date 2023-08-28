@@ -488,6 +488,9 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.fixed{
+  position: fixed;
+}
 .\!mt-10{
   margin-top: 2.5rem !important;
 }

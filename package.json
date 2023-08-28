@@ -7,6 +7,7 @@
     "build": "ENV_FILE=.env.prod webpack",
     "profile": "ENV_FILE=.env.prod PROFILE=1 webpack",
     "preview": "daobox-site serve --dev-dir ./src --dist-dir ./dist ",
+    "preview_l": "~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-site serve --dev-dir ./src --dist-dir ./dist ",
     "hi": "echo Hello Daobox"
   },
   "dependencies": {
