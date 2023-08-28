@@ -488,9 +488,6 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.fixed{
-  position: fixed;
-}
 .\!mt-10{
   margin-top: 2.5rem !important;
 }
@@ -523,6 +520,11 @@ video {
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
   margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
+.space-x-1\.5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.375rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.375rem * calc(1 - var(--tw-space-x-reverse)));
+}
 .space-x-6 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
@@ -547,16 +549,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
-.space-x-1\.5 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.375rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.375rem * calc(1 - var(--tw-space-x-reverse)));
-}
-.space-x-2 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .text-2xl{
   font-size: 1.5rem;
@@ -595,6 +587,10 @@ video {
 .font-semibold{
   font-weight: 600;
 }
+.\!text-red-500{
+  --tw-text-opacity: 1 !important;
+  color: rgb(239 68 68 / var(--tw-text-opacity)) !important;
+}
 .text-\[\#005b99\]{
   --tw-text-opacity: 1;
   color: rgb(0 91 153 / var(--tw-text-opacity));
@@ -603,8 +599,8 @@ video {
   --tw-text-opacity: 1;
   color: rgb(47 53 62 / var(--tw-text-opacity));
 }
-.text-black\/70{
-  color: rgb(0 0 0 / 0.7);
+.text-black\/60{
+  color: rgb(0 0 0 / 0.6);
 }
 .text-gray-500{
   --tw-text-opacity: 1;
@@ -613,9 +609,6 @@ video {
 .text-gray-600{
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-.text-black\/60{
-  color: rgb(0 0 0 / 0.6);
 }
 a{
   text-underline-offset: 4px;
@@ -727,7 +720,13 @@ body {
 .jingxuan > div{
     margin-bottom: 2rem;
 }
-
+.mark-top{
+  content: ' ';
+  background: url("data:image/svg+xml,%3Csvg xmlns=\"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg\" width=\"48\" height=\"48\" viewBox=\"0 0 48 48\"%3E%3Cg fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"%3E%3Cpath d=\"M24.0083 14.1006V42.0001\"%2F%3E%3Cpath d=\"M12 26L24 14L36 26\"%2F%3E%3Cpath d=\"M12 6H36\"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center / contain;
+  display: inline-block;
+  height: 0.7em;
+  width: 0.7em;
+}
 /*!******************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/.pnpm/css-loader@6.8.1_webpack@5.88.2/node_modules/css-loader/dist/cjs.js!./node_modules/.pnpm/postcss-loader@7.3.3_postcss@8.4.28_webpack@5.88.2/node_modules/postcss-loader/dist/cjs.js!./src/assets/css/yb_content2.scss ***!
   \******************************************************************************************************************************************************************************************************************************************************/

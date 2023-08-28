@@ -77,3 +77,9 @@ body {
     margin-bottom: 2rem;
   }
 }
+
+.mark-top{
+  content: ' ';
+  background: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="48" height="48" viewBox="0 0 48 48"%3E%3Cg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"%3E%3Cpath d="M24.0083 14.1006V42.0001"%2F%3E%3Cpath d="M12 26L24 14L36 26"%2F%3E%3Cpath d="M12 6H36"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E') no-repeat center center / contain;
+  @apply inline-block w-[0.7em] h-[0.7em];
+}

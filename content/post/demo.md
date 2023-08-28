@@ -1,12 +1,12 @@
 ```toml
-title: 我自己的标题
+title: 内容示例
 date: 2023-08-16
 tags: ["work", "abc"]
 slug: hello-dayu
 weight: 100
 ```
 
-# 标题1
+# 内容示例
 
 段落1
 
