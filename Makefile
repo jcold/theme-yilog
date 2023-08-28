@@ -45,3 +45,11 @@ dist-tpls: fe-build package-tpls
 
 sync-fe:
 	./sync_fe_dev_2.sh /Users/dayu/Coder/yiibox/daobox_fe
+
+
+.PHONY: tag
+tag:
+	@if [ "$(TAG)" != "" ]; then \
+		git tag -f $(TAG); \
+		git push -f github $(TAG); \
+	fi
