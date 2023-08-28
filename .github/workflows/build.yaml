@@ -54,7 +54,7 @@ jobs:
       run: npm run build
       
     - name: Zip the Build
-      run: zip -r yilog.zip ./dist/ 
+      run: mv dist yilbog && zip -r yilog.zip ./yilog
       
     - name: Create Release
       id: create_release
