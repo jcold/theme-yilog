@@ -27,10 +27,17 @@
         {% block body %}{% endblock body %}
 
         {% block footer %}
-        <div class="text-sm block-container mt-12 text-gray-500">©{{now() | date(format="%Y")}}, by<a href="https://www.daobox.cn" target="_blank">道盒</a></div>
+        <div class="text-sm block-container mt-12 text-gray-500 space-x-1.5">
+            <span>©{{now() | date(format="%Y")}}</span>
+            <span>by<a href="https://www.daobox.cn" target="_blank">道盒</a></span>
+            {% if __cfg.site.beian %}
+            <span><a href="https://beian.miit.gov.cn" target="_blank">{{__cfg.site.beian}}</a></span>
+            {% endif %}
+        </div>
         {% endblock footer %}
     </div>
     {% block js %}{{ assets(section="main", type="js") }}{% endblock js %}
+    {% include "_daobox/prism.html" %}
 </body>
 
 </html>

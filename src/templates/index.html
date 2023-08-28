@@ -6,7 +6,7 @@
 {% block body %}
 <div class="block-container space-y-6">
     <h1 class="text-4xl font-extrabold mt-6"><a href="{{base_url()}}/">{{__cfg.site.name}}</a></h1>
-    <p class="text-[95%] text-black/70">{{__cfg.site.summary}}</p>
+    <p class="text-[95%] text-black/60">{{__cfg.site.summary}}</p>
 
     {% set page_no =__qs.page | default(value=1) | int %}
     {% set start = (page_no - 1) * 5 %}

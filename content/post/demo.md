@@ -3,6 +3,7 @@ title: 我自己的标题
 date: 2023-08-16
 tags: ["work", "abc"]
 slug: hello-dayu
+weight: 100
 ```
 
 # 标题1
