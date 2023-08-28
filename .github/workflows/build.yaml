@@ -64,9 +64,8 @@ jobs:
         body: TODO New Release.
         draft: true
         prerelease: true
-        with:
-          files: |
-            yilog.zip
+        files: |
+          yilog.zip
         
     # - name: Upload Release Asset
     #   uses: actions/upload-release-asset@v1
