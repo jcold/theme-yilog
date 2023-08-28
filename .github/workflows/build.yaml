@@ -1,11 +1,9 @@
 name: Theme Release
 
-permissions:
-  contents: write
-  
+
+
 on:
   push:
-    # Sequence of patterns matched against refs/tags
     tags:
       - "v*" # Push events to matching v*, i.e. v1.0, v20.15.10
 
@@ -14,10 +12,12 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     strategy:
       matrix:
         node-version: [16.x]
-
 
     steps:
     - name: Checkout
@@ -65,13 +65,3 @@ jobs:
         prerelease: true
         files: |
           yilog.zip
-        
-    # - name: Upload Release Asset
-    #   uses: actions/upload-release-asset@v1
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #   with:
-    #     upload_url: ${{ steps.create_release.outputs.upload_url }}
-    #     asset_path: ./yilog.zip
-    #     asset_name: yilog.zip
-    #     asset_content_type: application/zip
