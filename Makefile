@@ -15,7 +15,20 @@ demo_pack:
 	cp daobox.yaml dist
 	cp -r content dist/
 
-demo:
+demo_l:
 	~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-site serve \
 		--work-dir ./dist \
 		--dist-dir ./dist 
+export_l:
+	DAOBOX_LOG=info,daobox_site=trace ~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-site serve \
+		--work-dir ./dist \
+		--dist-dir ./dist --export
+
+demo:
+	./node_modules/daobox-site/bin/daobox-site serve \
+		--work-dir ./dist \
+		--dist-dir ./dist 
+
+gen-demo-pages: build demo_pack
+	./node_modules/daobox-site/bin/daobox-site serve --work-dir ./dist --dist-dir=dist-pages --export
+
