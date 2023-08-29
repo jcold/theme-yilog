@@ -8,6 +8,7 @@ tag:
 	fi
 
 build:
+	pnpm install
 	pnpm run build
 
 demo_pack:
@@ -25,10 +26,10 @@ export_l:
 		--dist-dir ./dist --export
 
 demo:
-	./node_modules/daobox-site/bin/daobox-site serve \
+	daobox-site serve \
 		--work-dir ./dist \
 		--dist-dir ./dist 
 
-gen-demo-pages: build demo_pack
-	./node_modules/daobox-site/bin/daobox-site serve --work-dir ./dist --dist-dir=dist-pages --export
+demo-pages: build demo_pack
+	daobox-site serve --work-dir ./dist --dist-dir=dist-pages --export
 
