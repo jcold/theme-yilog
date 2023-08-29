@@ -6,11 +6,3 @@ cfg:
     description: 大余的修行日志。
     keywords: 大余, 道盒, dayu
     beian: 中ICP备20230828
-  daobox_site_assets: https://assets.daobox.cc/daobox-assets/0.0.1
-context:
-  # - location:
-  #     - /docs/
-  #   qs:
-  #     __tpl: /book.html
-  #     nav: /docs/_nav.md
-  #     ajax: /docs/

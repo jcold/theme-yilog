@@ -8,12 +8,14 @@ tag:
 	fi
 
 build:
+	rm -rf dist
 	pnpm install
 	pnpm run build
+	cp -r ./src/templates ./dist/templates
+	cp daobox*.yaml dist
 
-demo_pack:
+demo_pack: build
 	mv dist yilog && mkdir -p dist/theme && mv yilog dist/theme
-	cp daobox.yaml dist
 	cp -r content dist/
 
 demo_l:

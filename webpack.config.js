@@ -225,22 +225,22 @@ module.exports = {
     }),
 
     // 复制public文件
-    ...(isProd
-      ? [
-          new CopyWebpackPlugin({
-            patterns: [
-              {
-                from: resolve("./src/templates"),
-                to: resolve("./dist/templates"),
-              },
-              {
-                from: resolve("./daobox-theme.yaml"),
-                to: resolve("./dist/"),
-              },
-            ],
-          }),
-        ]
-      : []),
+    // ...(isProd
+    //   ? [
+    //       new CopyWebpackPlugin({
+    //         patterns: [
+    //           {
+    //             from: resolve("./src/templates"),
+    //             to: resolve("./dist/templates"),
+    //           },
+    //           {
+    //             from: resolve("./daobox-theme.yaml"),
+    //             to: resolve("./dist/"),
+    //           },
+    //         ],
+    //       }),
+    //     ]
+    //   : []),
 
     ...(process.env.PROFILE === '1' ? [new BundleAnalyzerPlugin()] : []),
 
