@@ -47,11 +47,8 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pnpm-store-
 
-    - name: build
-      run: make build
-      
-    - name: Zip the Build
-      run: mv dist yilog && zip -r yilog.zip ./yilog
+    - name: dist
+      run: make theme-dist
       
     - name: Create Release
       id: create_release

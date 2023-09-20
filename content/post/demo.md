@@ -11,7 +11,7 @@ weight: 100
 段落1
 
 
-我是图片![Alt Text](@media/3.webp)
+我是图片![Alt Text](3.webp)
 
 ```dcard2
 card: bilibili
