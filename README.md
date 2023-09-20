@@ -1,3 +1,3 @@
-# Daobox 静态博客样式
+# 道盒发布样式
 
-请移步至[官网](https://www.daobox.cn/site/)
+请移步至[官网](https://publish.daobox.cn/)了解详情。
