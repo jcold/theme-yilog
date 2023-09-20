@@ -14,7 +14,8 @@ build:
 	cp -r ./src/templates ./dist/templates
 	cp daobox*.yaml dist
 
-theme-dist:
+theme-dist: build
+	if [ -d yilog ]; then rm -rf yilog ; fi
 	mv dist yilog
 	zip -r yilog.zip ./yilog
 
