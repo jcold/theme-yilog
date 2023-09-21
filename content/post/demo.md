@@ -1,10 +1,10 @@
-```toml
+---
 title: 内容示例
 date: 2023-08-16
 tags: ["work", "abc"]
 slug: hello-dayu
 weight: 100
-```
+---
 
 # 内容示例
 
