@@ -77,8 +77,8 @@ devDependencies:
     specifier: ^6.8.1
     version: 6.8.1(webpack@5.88.2)
   daobox-publish:
-    specifier: ^0.6.1
-    version: 0.6.1
+    specifier: ^0.6.3
+    version: 0.6.3
   dotenv:
     specifier: ^16.3.1
     version: 16.3.1
@@ -2604,8 +2604,8 @@ packages:
   /csstype@3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
 
-  /daobox-publish@0.6.1:
-    resolution: {integrity: sha512-V1vv16Zji2WnmwFlPvPgpN1rCif3aW5TdlV+oi47bqWifyM0B8yxZHG/oiTE7D2tfagquqH8iAorMMcMg5uDIA==}
+  /daobox-publish@0.6.3:
+    resolution: {integrity: sha512-Mumv37DmQuhyGPh394VrdFPakJLSaaItm1Sl02ImQyIxDv20Yyn9GWRshoIegtOWXU0yOEKr+3Ex+A0cEuj8uQ==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
@@ -3101,6 +3101,17 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
+    dev: false
+
+  /follow-redirects@1.15.3:
+    resolution: {integrity: sha512-1VzOtuEM8pC9SFU1E+8KfTjZyMztRsgEfwQl44z8A25uy13jSzTj6dyK2Df52iV0vgHCfBwLhDWevLn95w5v6Q==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: true
 
   /fork-ts-checker-webpack-plugin@8.0.0(typescript@5.2.2)(webpack@5.88.2):
     resolution: {integrity: sha512-mX3qW3idpueT2klaQXBzrIM/pHw+T0B/V9KHEvNrqijTq9NFnMZU6oreVxDYcf33P8a5cW+67PjodNHthGnNVg==}
@@ -3852,7 +3863,7 @@ packages:
   /nodejs-file-downloader@4.12.1:
     resolution: {integrity: sha512-LpfCTNhh805AlLnJnzt1PuEj+RmbrccbAQZ6hBRw2e6QPVR0Qntuo6qqyvPHG5s77/0w0IEKgRAD4nbSnr/X4w==}
     dependencies:
-      follow-redirects: 1.15.2
+      follow-redirects: 1.15.3
       https-proxy-agent: 5.0.1
       mime-types: 2.1.35
       sanitize-filename: 1.6.3
