@@ -1,3 +1,12 @@
+# export PATH="./node_modules/.bin:$PATH"
+
+ifneq (, $(shell echo $$DEBUG))
+  EKMP = $(shell which everkm-publish)
+else
+  EKMP = ./node_modules/.bin/everkm-publish
+endif
+
+
 .PHONY: tag
 tag:
 	@if [ "$(TAG)" != "" ]; then \
@@ -8,19 +17,19 @@ tag:
 	
 dev:
 	@EVERKM_LOG=info \
-		everkm-publish serve \
+		$(EKMP) serve \
 		--dev-dir ./ \
 		--listen=0.0.0.0:9081
 
 work:
 	@EVERKM_LOG=info \
-		everkm-publish serve \
+		$(EKMP) serve \
 		--work-dir ./ \
 		--listen=0.0.0.0:9081
 
 build-pages:
 	@EVERKM_LOG=info \
-		everkm-publish serve \
+		$(EKMP) serve \
 		--dev-dir ./ \
 		--export
 
@@ -37,13 +46,14 @@ dist: fe-build build-pages
 
 
 preview:
-	@everkm-publish web \
+	@$(EKMP) web \
 		--work-dir dist
 
 
 package-theme:
+	@echo $(EKMP)
 	@EVERKM_LOG=info \
-		everkm-publish package-theme \
+		$(EKMP) package-theme \
 		--dev-dir ./ 
 
 
