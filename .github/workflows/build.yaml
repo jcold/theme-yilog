@@ -47,8 +47,8 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pnpm-store-
 
-    - name: dist
-      run: make theme-dist
+    - name: build theme
+      run: make bundle-theme
       
     - name: Create Release
       id: create_release
@@ -58,4 +58,4 @@ jobs:
         draft: true
         prerelease: true
         files: |
-          yilog.zip
+          theme/yilog.zip

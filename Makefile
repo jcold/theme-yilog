@@ -46,7 +46,15 @@ package-theme:
 		everkm-publish package-theme \
 		--dev-dir ./ 
 
+
 dist-theme: fe-build package-theme
 	@if [ ! -d theme/dev ]; then mkdir -p theme/dev; fi
+	@if [ -d theme/dev ]; then rm -rf theme/dev/* ; fi
 	@cp -r dist/* theme/dev/
 
+
+bundle-theme: dist-theme
+	@cd theme && \
+		if [ -d yilog ]; then rm -rf yilog ; fi && \
+		mv dev yilog && \
+		zip -r yilog.zip ./yilog
