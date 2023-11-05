@@ -1,5 +1,3 @@
-# export PATH="./node_modules/.bin:$PATH"
-
 ifneq (, $(shell echo $$DEBUG))
   EKMP = $(shell which everkm-publish)
 else
