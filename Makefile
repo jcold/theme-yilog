@@ -51,7 +51,7 @@ preview:
 package-theme:
 	@echo $(EKMP)
 	@EVERKM_LOG=info \
-		$(EKMP) package-theme \
+		$(EKMP) theme pack \
 		--dev-dir ./ 
 
 
