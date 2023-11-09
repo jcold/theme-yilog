@@ -42,6 +42,9 @@ fe-build:
 
 dist: fe-build build-pages
 
+sync-config:
+	@cp everkm-theme.yaml content/post/_everkm-theme.inc.yaml
+
 
 preview:
 	@$(EKMP) web \

@@ -1,10 +1,16 @@
 ---
-title: 内容示例
+title: 道盒 Markdown 示例
 date: 2023-08-16
-tags: ["work", "abc"]
-slug: hello-dayu
-weight: 100
+tags: ["demo", "markdown"]
+slug: hello-everkm-markdown
+weight: 99
 ---
+
+## 宏
+
+### include
+
+{{everkm::include(file="_everkm-theme.inc.yaml", as="code")}}
 
 # 内容示例
 
@@ -13,8 +19,7 @@ weight: 100
 
 我是图片![Alt Text](3.webp)
 
-```dcard2
-card: bilibili
+```yaml dcard/bilibili
 vid: BV1sz4y197L8
 description: 简介
 ```
