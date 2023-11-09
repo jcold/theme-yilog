@@ -1,7 +1,7 @@
 {
   "name": "yilog",
   "private": false,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
     "dev": "ENV_FILE=.env.dev webpack --watch",
     "build": "ENV_FILE=.env.prod webpack",

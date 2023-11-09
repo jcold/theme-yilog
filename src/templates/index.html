@@ -8,9 +8,10 @@
     <h1 class="text-4xl font-extrabold mt-6"><a href="{{base_url()}}/">{{__cfg.site.name}}</a></h1>
     <p class="text-[95%] text-black/60">{{__cfg.site.summary}}</p>
 
+    {% set page_size = __cfg | get(key="page_size", default=5) %}
     {% set page_no =__qs.page | default(value=1) | int %}
-    {% set start = (page_no - 1) * 5 %}
-    {% set end = start + 5 %}
+    {% set start = (page_no - 1) * page_size %}
+    {% set end = start + page_size %}
     {% set items = posts(dir="/", recursive=true) %}
     {% set page_count = script(content="Math.ceil(args.val)", val = items | length / 5 ) %}
 
@@ -49,7 +50,9 @@
         </div>
         {% endif %}
 
+        {% if page_count > 1 %}
         <div class="">{{page_no}} / {{page_count}}</div>
+        {% endif %}
             
         {% if items | length > end %}
         <div class="flex items-center space-x-1">
