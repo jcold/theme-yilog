@@ -14,6 +14,7 @@ tag:
 
 	
 dev:
+	@echo use ekmp $(EKMP)
 	@EVERKM_LOG=info \
 		$(EKMP) serve \
 		--dev-dir ./ \

@@ -1,8 +1,7 @@
-theme:
-  name: yilog
-  author: dayu<dayu@dayu.me>
-  repository: https://github.com/everkm/theme-yilog
-  demo: https://yilog.theme.daobox.cc/
+name: yilog
+author: dayu<dayu@dayu.me>
+repository: https://github.com/everkm/theme-yilog
+demo: https://yilog.theme.daobox.cc/
 
 
 cfg:
