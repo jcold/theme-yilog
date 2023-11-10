@@ -15,8 +15,8 @@ dependencies:
     specifier: ^3.32.1
     version: 3.32.1
   everkm-publish:
-    specifier: ^0.10.3
-    version: 0.10.3
+    specifier: ^0.10.4
+    version: 0.10.4
   katex:
     specifier: ^0.16.8
     version: 0.16.8
@@ -2946,8 +2946,8 @@ packages:
     engines: {node: '>=0.8.x'}
     dev: true
 
-  /everkm-publish@0.10.3:
-    resolution: {integrity: sha512-ZTwLSOE4AL/mL7fBafuxw7x7JQjrK4B/9le6NEPXJ3jky5i5L6TkBAjOG30zRKXMsAeJtHREIzJDL1JKmoINZw==}
+  /everkm-publish@0.10.4:
+    resolution: {integrity: sha512-Db2nYwB33ajBKGkRzwz8WbVOzyf8i2PuWuK2dqqPlJAFheXeGGA35uQVhyvmIKEdJSnh0rpiyMV2J8KK63PBXw==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
@@ -3094,6 +3094,16 @@ packages:
 
   /follow-redirects@1.15.2:
     resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: false
+
+  /follow-redirects@1.15.3:
+    resolution: {integrity: sha512-1VzOtuEM8pC9SFU1E+8KfTjZyMztRsgEfwQl44z8A25uy13jSzTj6dyK2Df52iV0vgHCfBwLhDWevLn95w5v6Q==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
@@ -3851,7 +3861,7 @@ packages:
   /nodejs-file-downloader@4.12.1:
     resolution: {integrity: sha512-LpfCTNhh805AlLnJnzt1PuEj+RmbrccbAQZ6hBRw2e6QPVR0Qntuo6qqyvPHG5s77/0w0IEKgRAD4nbSnr/X4w==}
     dependencies:
-      follow-redirects: 1.15.2
+      follow-redirects: 1.15.3
       https-proxy-agent: 5.0.1
       mime-types: 2.1.35
       sanitize-filename: 1.6.3
