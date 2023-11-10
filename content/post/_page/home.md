@@ -9,14 +9,6 @@ date: 2023-08-19
 ```yaml
 cfg:
   site:
-    name: 站点名称
-    contact: 联系方式
-    summary: 一句话简介
-    description: SEO主页简介
-    keywords: SEO主页关键词
-
-cfg:
-  site:
     name: 道盒经典博客展示
     contact: hello@example.com
     summary: 此博客模板适用于道盒发布，可以在此基础上自由更改，分发。
