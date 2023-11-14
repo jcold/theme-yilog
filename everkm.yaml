@@ -7,7 +7,3 @@ cfg:
     description: 经典BLOG模板。
     # beian: 中ICP备20230828
   page_size: 12
-
-directory:
-  - path: /
-    url: /posts/2023/{{slug}}.html

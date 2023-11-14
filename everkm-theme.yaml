@@ -15,8 +15,24 @@ cfg:
   page_size: 12
 
 
+directory:
+  - path: /_wiki/
+    url: /wiki/{{slug}}.html
+  - path: /
+    url: /posts/2023/{{slug}}.html
+
+
 context:
   - location:
       - /posts/
     qs:
       __tpl: /detail.html
+  - location:
+      - /wiki/index.html
+    qs:
+      home: 1
+      path: /_wiki/index.md
+  - location:
+      - /wiki/
+    qs:
+      __tpl: /wiki.html
