@@ -1,0 +1,7 @@
+name: bilibili2
+assets:
+  inject: 
+    - assets/b.css
+    - assets/a.js
+  files:
+    - assets/**/*.{css,js}

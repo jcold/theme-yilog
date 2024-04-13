@@ -1,6 +1,9 @@
 function getEntrypoint() {
   return {
-    main: ['./src/assets/js/MainEntrypoint.ts'],
+    main: ['./src/main.ts'],
+    // download: ['./src/download.ts'],
+    // app_download: ['./src/app_download/app_download.ts'],
+    // book: ['./src/book.ts'],
   }
 }
 

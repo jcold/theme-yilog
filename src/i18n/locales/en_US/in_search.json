@@ -1,0 +1,8 @@
+{
+    "search": "Search",
+    "cancel": "Cancel",
+    "to_select": "To Select",
+    "to_navigate": "To navigate",
+    "to_close": "Cancel",
+    "no_results": "No results for “{{wd}}“."
+}

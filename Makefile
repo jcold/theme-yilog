@@ -1,5 +1,5 @@
 ifneq (, $(shell echo $$DEBUG))
-  EKMP = $(shell which everkm-publish)
+  EKMP = "/Users/dayu/Coder/yiibox/daobox-server-next/wz-server/target/debug/everkm-publish"
 else
   EKMP = ./node_modules/.bin/everkm-publish
 endif

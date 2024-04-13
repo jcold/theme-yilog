@@ -1,0 +1,8 @@
+{
+    "search": "搜索",
+    "cancel": "取消",
+    "to_select": "打开选中",
+    "to_navigate": "选择结果",
+    "to_close": "关闭",
+    "no_results": "未搜索到“{{wd}}“相关内容。"
+}

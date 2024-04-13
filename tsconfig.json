@@ -11,6 +11,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./ts-built/",
+    "resolveJsonModule": true,
     // 是相对于"baseUrl"进行解析
     "paths": {
       "@/*": ["src/*"],

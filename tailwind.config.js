@@ -1,22 +1,25 @@
-const predefined_list = (process.env["TW_CONTENT_LIST"] || "")
-  .split(":")
-  .filter((v) => v.length);
+const { addDynamicIconSelectors } = require('@iconify/tailwind');
+
+const predefined_list = (process.env['TW_CONTENT_LIST'] || '')
+  .split(':')
+  .filter((v) => v.length)
 
 let content_list = [
-  "./public/index.html",
-  "./src/**/*.{vue,js,ts,jsx,tsx,html}",
-];
+  './public/index.html',
+  './src/**/*.{vue,js,ts,jsx,tsx,html,md}',
+  './content/**/*.md',
+]
 
 if (predefined_list.length) {
-  content_list = predefined_list;
+  content_list = predefined_list
 }
 // console.log('tailwind content list', content_list)
 // console.log('env', process.env)
 
 module.exports = {
-  mode: "jit",
+  mode: 'jit',
   content: content_list,
-  darkMode: "media", // or 'media' or 'class'
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
     // colors: {
     //   blue: colors.blue,
@@ -30,7 +33,8 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require("@tailwindcss/typography"),
+    require('@tailwindcss/typography'),
     // require('@tailwindcss/line-clamp'),
+    addDynamicIconSelectors(),
   ],
-};
+}
