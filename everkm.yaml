@@ -1,6 +1,6 @@
 cfg:
   site:
-    name: 道盒博客
+    name: 道盒发布模板
     contact: hello@example.com
     summary: 此博客模板适用于道盒发布，可以在此基础上自由更改，分发。
     keywords: everkm, publish, everkm-theme, yilog, 道盒
@@ -19,16 +19,16 @@ cfg:
 sitemap:
   channel_name: 首页
   children:
-    - path: posts/**
+    - path: posts/
       channel_name: 文章
       qs:
         __tpl: details.html
-    - path: gu-wen-guan-zhi/**
+    - path: gu-wen-guan-zhi/
       channel_name: 观止
       qs:
         dir: /古文观止/
         __tpl: list.html
-    - path: wiki/**
+    - path: wiki/
       channel_name: WIKI
       qs:
         __tpl: wiki.html
@@ -40,7 +40,9 @@ sitemap:
             path: /_wiki/index.md
 
 map_url:
-  - dir: /_wiki/**
+  - dir: /_wiki/
     url: /wiki/{{slug}}.html
-  - dir: /古文观止/**
+  - dir: /古文观止/
     url: /gu-wen-guan-zhi/{{year}}/{{slug}}.html
+  - dir: /
+    url: /posts/{{year}}/{{slug}}.html

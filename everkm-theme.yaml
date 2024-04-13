@@ -7,42 +7,42 @@ demo: https://yilog.theme.daobox.cc/
 sitemap:
   channel_name: "{{t(text='Home')}}"
   children:
-    - path: blog/**
+    - path: blog/
       channel_name: "{{t(text='Blog')}}"
       channel_path: blog/
       qs:
         dir: /blog/
-        __tpl: /list.html
+        __tpl: list.html
         no_dir: true
         category_url_base: /blog/category/
         page_size: 10
-    - path: docs/**
+    - path: docs/
       channel_name: "{{t(text='Docs')}}"
       channel_path: docs/
       qs:
         nav: /docs/_nav.md
-        __tpl: /book.html
+        __tpl: book.html
         ajax: /docs/
-    - path: guide/**
+    - path: guide/
       channel_name: "{{t(text='Guides')}}"
       channel_path: guide/
       qs:
         nav: /guide/_nav.md
-        __tpl: /book.html
+        __tpl: book.html
         ajax: /guide/
     - path: download.html
       channel_name: "{{t(text='download: channel download')}}"
     - path: changelog.html
       channel_name: "{{t(text='Changelog')}}"
       qs:
-        __tpl: /details.html
+        __tpl: details.html
         no_dir: true
         no_time: true
 
 map_url:
-  - dir: /blog/**
+  - dir: /blog/
     url: /blog/{{year}}/{{slug}}.html
-  - dir: /docs/**
+  - dir: /docs/
     url: /docs/{{slug}}.html
-  - dir: /guide/**
+  - dir: /guide/
     url: /guide/{{slug}}.html
