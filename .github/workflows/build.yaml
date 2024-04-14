@@ -48,7 +48,9 @@ jobs:
           ${{ runner.os }}-pnpm-store-
 
     - name: build theme
-      run: make bundle-theme
+      run: |
+        export EVERKM_VERSION=$(echo ${{ github.ref }} | sed -n 's/refs\/tags\/v\(.*\)/\1/p')
+        make bundle-theme
       
     - name: Create Release
       id: create_release
