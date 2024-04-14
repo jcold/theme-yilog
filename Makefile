@@ -54,9 +54,7 @@ preview:
 
 package-theme:
 	@echo $(EKMP)
-	@EVERKM_LOG=info \
-		$(EKMP) theme pack \
-		--dev-dir ./ 
+	$(EKMP) theme package --dev-dir ./ 
 
 
 dist-theme: fe-build package-theme

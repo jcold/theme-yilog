@@ -1,8 +1,8 @@
 name: yilog
+version: 0.0.0
 author: dayu<dayu@dayu.me>
 repository: https://github.com/daobox-site-theme/yilog
 demo: https://yilog.theme.daobox.cc/
-
 
 sitemap:
   channel_name: "{{t(text='Home')}}"
@@ -40,9 +40,9 @@ sitemap:
         no_time: true
 
 map_url:
-  - dir: /blog/
+  - dir: /blog/**
     url: /blog/{{year}}/{{slug}}.html
-  - dir: /docs/
+  - dir: /docs/**
     url: /docs/{{slug}}.html
-  - dir: /guide/
+  - dir: /guide/**
     url: /guide/{{slug}}.html
