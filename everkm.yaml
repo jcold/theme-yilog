@@ -2,12 +2,16 @@ cfg:
   site:
     name: 道盒发布模板
     contact: hello@example.com
-    summary: 此博客模板适用于道盒发布，可以在此基础上自由更改，分发。
-    keywords: everkm, publish, everkm-theme, yilog, 道盒
-    description: 经典BLOG模板。
     # beian: 中ICP备20230828
   page_size: 12
   default_lang: zh_CN
+  primary_nav.zh_CN:
+    - title: 首页
+      url: /
+    - title: Blog
+      url: /blog/
+    - title: Wiki
+      url: /wiki/
   home_news:
     section_name: Blog
     dir: /blog/
@@ -15,6 +19,11 @@ cfg:
     more:
       title: More
       link: ./blog/
+
+  in_search:
+    app_id: 1N74YC70XF
+    api_key: 95bb37e3122ee9cb57a8ee0abbd14409
+    index: yilog
 
 sitemap:
   channel_name: 首页
