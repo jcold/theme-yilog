@@ -1,6 +1,8 @@
 name: Telegram Notification
 
-# Ref: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_run
+# Ref: 
+# 1. https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_run
+# 2. https://github.com/marketplace/actions/telegram-message-notify
 
 on:
   workflow_run:
@@ -21,7 +23,7 @@ jobs:
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
             ---
-            Commit message: ${{ github.event.commits[0].message }}
+            Commit message: ${{ github.event.head_commit.message }}
 
             Action: https://github.com/${{ github.repository }}/actions 
 
@@ -39,7 +41,7 @@ jobs:
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
             ---
-            Commit message: ${{ github.event.commits[0].message }}
+            Commit message: ${{ github.event.head_commit.message }}
 
             Action: https://github.com/${{ github.repository }}/actions 
 
