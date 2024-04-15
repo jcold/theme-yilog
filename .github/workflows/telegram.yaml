@@ -20,6 +20,9 @@ jobs:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
+            ---
+            Commit message: ${{ github.event.commits[0].message }}
+
             Action: https://github.com/${{ github.repository }}/actions 
 
             Result: success
@@ -35,6 +38,9 @@ jobs:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
+            ---
+            Commit message: ${{ github.event.commits[0].message }}
+
             Action: https://github.com/${{ github.repository }}/actions 
 
             Result: failure
