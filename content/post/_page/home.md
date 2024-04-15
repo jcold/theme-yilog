@@ -19,6 +19,6 @@ cfg:
 ```
 
 
-## 布局展示
+## Wiki
 
-1. [Wiki](~/wiki/) 展示
+1. :point_right: [Wiki](~/wiki/) 进入

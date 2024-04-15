@@ -1,3 +1,4 @@
+import '@/assets/css/tailwind.scss'
 import './style.scss'
 import './assets/github-markdown.css'
 import 'everkm-wa/main.css'
