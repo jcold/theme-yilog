@@ -4,7 +4,7 @@
 
 The Story of WHO MOVED MY CHEESE?(Extracted) 
 
- Having cheese makes you happy. The more important your cheese is to you, the more you want to hold on to it. If you do not change you can become extinct. What would you do if you weren’t afraid?Smell the cheese often so you know when it is getting old. Movement in a new direction helps you find new cheese. When you move beyond your fear, you feel free. Imagining myself enjoying new cheese, even before I find it, leads me to find it. The quicker you let go of old cheese, the sooner you find new cheese. It is safer to search in the Maze than remain in a cheeseless situation. Old beliefs do not lead you to new cheese. When you see that you can find and enjoy new cheese you can change course. Noticing small changes early helps you to adapt to thebigger changes that are to come.
+ Having cheese makes you happy. The more important your cheese is to you, the more you want to hold on to it. If you do not change you can become extinct. What would you do if you weren’t afraid? Smell the cheese often so you know when it is getting old. Movement in a new direction helps you find new cheese. When you move beyond your fear, you feel free. Imagining myself enjoying new cheese, even before I find it, leads me to find it. The quicker you let go of old cheese, the sooner you find new cheese. It is safer to search in the Maze than remain in a cheeseless situation. Old beliefs do not lead you to new cheese. When you see that you can find and enjoy new cheese you can change course. Noticing small changes early helps you to adapt to thebigger changes that are to come.
 
 THE HANDWRITING ON THE WALL:
 
