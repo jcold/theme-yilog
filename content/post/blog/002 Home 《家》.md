@@ -5,7 +5,7 @@ weight: 10
 Home
 
 ```yaml dcard/audio
-src: "$src:/blog/002 Home 《家》.mp3"
+src: "$src:002 Home 《家》.mp3"
 ```
 
 What makes a home? Love and sympathy and confidence.

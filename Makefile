@@ -45,6 +45,7 @@ dist: fe-build build-pages
 
 sync-config:
 	@cp everkm-theme.yaml content/post/_everkm-theme.inc.yaml
+	@cp everkm.yaml content/post/_everkm.inc.yaml
 
 
 preview:
