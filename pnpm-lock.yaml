@@ -149,8 +149,8 @@ devDependencies:
     specifier: ^5.1.3
     version: 5.1.3(eslint@8.57.0)(prettier@3.2.5)
   everkm-publish:
-    specifier: 0.12.5
-    version: 0.12.5
+    specifier: 0.12.6
+    version: 0.12.6
   fork-ts-checker-webpack-plugin:
     specifier: ^9.0.2
     version: 9.0.2(typescript@5.4.3)(webpack@5.91.0)
@@ -3418,8 +3418,8 @@ packages:
     engines: {node: '>=0.8.x'}
     dev: true
 
-  /everkm-publish@0.12.5:
-    resolution: {integrity: sha512-mR0/awoxukArEvlS4wYSBsfbwZf4YOy3Xi6/4nMDpomDpMJ2I0QPxxJiJXgF6trpWanIxRJaJ2yU4fKlIvrJGQ==}
+  /everkm-publish@0.12.6:
+    resolution: {integrity: sha512-FDHX9p/0igIWR6ph/ER/xEehUZbQPoQjkvRqxBrUni38zDb24IKEnB+9Yxlb/r0NeagjFMymgJ20WJs7IopIww==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
