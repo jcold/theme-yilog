@@ -4,6 +4,10 @@ weight: 10
 
 Home
 
+```yaml dcard/audio
+src: "$src:/blog/002 Home 《家》.mp3"
+```
+
 What makes a home? Love and sympathy and confidence.
 
 It is a place where kindly affections exist among all the members of the family. The parents take good care of their children, and the children are interested in the activities of their parents. Thus all of them are bound together by affection, and they find their home to be the cheeriest place in the world.
