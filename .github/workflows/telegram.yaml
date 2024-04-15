@@ -6,7 +6,8 @@ name: Telegram Notification
 
 on:
   workflow_run:
-    workflows: ['Theme Release']
+    workflows: 
+      - Theme Release
     types:
       - completed
 
@@ -23,12 +24,8 @@ jobs:
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
             ---
-            Ref: ${{ github.ref	 }}
-
             Action: https://github.com/${{ github.repository }}/actions 
-
             Result: success
-
             ---
 
   on-failure:
@@ -42,10 +39,6 @@ jobs:
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
             ---
-            Ref: ${{ github.ref	 }}
-
             Action: https://github.com/${{ github.repository }}/actions 
-
             Result: failure
-
             --- 
