@@ -50,7 +50,7 @@ jobs:
     
     - name: build pages
       run: |
-        make dist2
+        make dist
 
     - uses: stefanzweifel/git-auto-commit-action@v5
       with:

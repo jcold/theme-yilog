@@ -1,5 +1,7 @@
 name: Telegram Notification
 
+# Ref: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_run
+
 on:
   workflow_run:
     workflows: ['Theme Release']
@@ -7,7 +9,7 @@ on:
       - completed
 
 jobs:
-    
+
   on-success:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
