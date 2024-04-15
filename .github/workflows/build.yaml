@@ -92,19 +92,19 @@ jobs:
           theme/yilog.zip
 
 
-  notify:
-    runs-on: ubuntu-latest
-    steps:
+  # notify:
+  #   runs-on: ubuntu-latest
+  #   steps:
 
-    - name: Send Telegram notification
-      env:
-        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      run: |
-        if [ ${{ job.status }} == 'success' ]; then
-          MESSAGE="Deployment of ${GITHUB_WORKFLOW} successful!"
-        else
-          MESSAGE="Deployment of ${GITHUB_WORKFLOW} failed!"
-        fi
-        URL="https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage"
-        curl -s -X POST $URL -d chat_id=${TELEGRAM_CHAT_ID} -d text="${MESSAGE}"
+  #   - name: Send Telegram notification
+  #     env:
+  #       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+  #       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+  #     run: |
+  #       if [ ${{ job.status }} == 'success' ]; then
+  #         MESSAGE="Deployment of ${GITHUB_WORKFLOW} successful!"
+  #       else
+  #         MESSAGE="Deployment of ${GITHUB_WORKFLOW} failed!"
+  #       fi
+  #       URL="https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage"
+  #       curl -s -X POST $URL -d chat_id=${TELEGRAM_CHAT_ID} -d text="${MESSAGE}"
