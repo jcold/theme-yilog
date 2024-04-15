@@ -50,7 +50,7 @@ jobs:
     
     - name: build pages
       run: |
-        make dist
+        make dist2
 
     - uses: stefanzweifel/git-auto-commit-action@v5
       with:
@@ -90,6 +90,11 @@ jobs:
         prerelease: true
         files: |
           theme/yilog.zip
+
+
+  notify:
+    runs-on: ubuntu-latest
+    steps:
 
     - name: Send Telegram notification
       env:
