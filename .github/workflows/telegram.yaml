@@ -25,6 +25,7 @@ jobs:
           message: |
             ---
             Action: https://github.com/${{ github.repository }}/actions 
+            Release: https://github.com/${{ github.repository }}/releases 
             Result: success
             ---
 
@@ -40,5 +41,6 @@ jobs:
           message: |
             ---
             Action: https://github.com/${{ github.repository }}/actions 
+            Release: https://github.com/${{ github.repository }}/releases
             Result: failure
             --- 
