@@ -2,7 +2,7 @@ cfg:
   site:
     name: 道盒发布模板
     contact: hello@example.com
-    # beian: 中ICP备20230828
+    # beian.zh_CN: 中ICP备20230828
   
   # 每页数量
   page_size: 12
