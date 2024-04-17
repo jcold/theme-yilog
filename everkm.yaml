@@ -9,6 +9,8 @@ cfg:
 
   # 界面默认翻译语言
   default_lang: zh_CN
+  # 日期格式, 默认: `%Y-%m-%d %H:%M:%S`
+  date_format: "%Y-%m-%d %H:%M"
 
   # 主导航
   primary_nav.zh_CN:
