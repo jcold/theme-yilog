@@ -11,7 +11,7 @@
 
       <template v-if="!justOnlyButton">
         <span class="mr-4 text-[0.9em] text-gray-500">{{
-          $t('in_search:search')
+          $t('embed_search:search')
         }}</span>
         <div class="space-x-[1px] text-[0.8em] text-gray-400">
           <span class="" v-text="cmdKey"></span>

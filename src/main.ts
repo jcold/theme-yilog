@@ -1,4 +1,4 @@
-import '@/assets/css/tailwind.scss'
+// import '@/assets/css/tailwind.scss'
 import './style.scss'
 import './assets/github-markdown.css'
 import 'everkm-wa/main.css'
@@ -19,7 +19,7 @@ import {HotKeysManager} from './components/keymap/HotKeysManager'
 import {HOT_KEYS_MGR} from './components/keymap/useHotKeysManager'
 
 const ekmTags = {
-  'ekm-in-search': import('./in_search/InSearch.vue'),
+  'ekm-in-search': import('./embed_search/InSearch.vue'),
   'ekm-app-download': import('./app_download/DownloadWidget.vue'),
 }
 

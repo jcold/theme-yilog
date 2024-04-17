@@ -1,8 +1,8 @@
 import i18next from 'i18next'
 import enDownload from './locales/en_US/download.json'
 import zhDownload from './locales/zh_CN/download.json'
-import enInSearch from './locales/en_US/in_search.json'
-import zhInSearch from './locales/zh_CN/in_search.json'
+import enInSearch from './locales/en_US/embed_search.json'
+import zhInSearch from './locales/zh_CN/embed_search.json'
 import en_infinite_load from './locales/en_US/infinite_load.json'
 import zh_infinite_load from './locales/zh_CN/infinite_load.json'
 
@@ -20,12 +20,12 @@ i18next.init({
   resources: {
     en_US: {
       download: enDownload,
-      in_search: enInSearch,
+      embed_search: enInSearch,
       infinite_load: en_infinite_load,
     },
     zh_CN: {
       download: zhDownload,
-      in_search: zhInSearch,
+      embed_search: zhInSearch,
       infinite_load: zh_infinite_load,
     },
   },

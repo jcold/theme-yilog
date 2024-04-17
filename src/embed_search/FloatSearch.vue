@@ -30,7 +30,7 @@
           class="ml-2 flex h-full flex-shrink-0 flex-grow-0 cursor-pointer select-none items-center whitespace-nowrap border-l px-4 hover:bg-black/5"
           @click="handleClose"
         >
-          {{ $t('in_search:cancel') }}
+          {{ $t('embed_search:cancel') }}
         </div>
       </div>
 
@@ -42,7 +42,7 @@
         <span
           class="icon-[oui--cross-in-circle-empty] text-[2.5em] text-gray-400"
         ></span>
-        <div class="">{{ $t('in_search:no_results', {wd: wd}) }}</div>
+        <div class="">{{ $t('embed_search:no_results', {wd: wd}) }}</div>
       </div>
       <!-- 结果列表 -->
       <div
@@ -106,16 +106,16 @@
           <div class="hidden gap-3 text-sm text-gray-500 md:flex">
             <div>
               <span class="keycode">↵</span>
-              <span class="ml-1.5">{{ $t('in_search:to_select') }}</span>
+              <span class="ml-1.5">{{ $t('embed_search:to_select') }}</span>
             </div>
             <div>
               <span class="keycode">↓</span>
               <span class="keycode ml-1">↑</span>
-              <span class="ml-1.5">{{ $t('in_search:to_navigate') }}</span>
+              <span class="ml-1.5">{{ $t('embed_search:to_navigate') }}</span>
             </div>
             <div>
               <span class="keycode">Esc</span>
-              <span class="ml-1.5">{{ $t('in_search:to_close') }}</span>
+              <span class="ml-1.5">{{ $t('embed_search:to_close') }}</span>
             </div>
           </div>
           <div class="">
