@@ -14,7 +14,7 @@ tag:
 
 	
 dev:
-	@echo use ekmp $(EKMP)
+	@echo Use everkm-publish $(EKMP)
 	@EVERKM_LOG=info,everkm_publish=debug \
 		$(EKMP) serve \
 		--work-dir ./demo_posts \
@@ -43,7 +43,7 @@ fe-dev:
 fe-build:
 	pnpm run build
 
-dist: fe-build build-pages
+dist-pages: fe-build build-pages
 
 sync-config:
 	@cp everkm-theme.yaml demo_posts/_everkm-theme.inc.yaml
@@ -54,20 +54,20 @@ preview:
 	@$(EKMP) web \
 		--work-dir dist
 
-
+# 复制 theme 相关的文件到发布目录，不包含前端项目构建产物
 package-theme:
-	@echo $(EKMP)
-	$(EKMP) theme package --dev-dir ./ 
+	@echo Use everkm-publish: $(EKMP)
+	@$(EKMP) theme package --dev-dir ./ 
 
-
+# 发布 theme, 包含前端构建产物
 dist-theme: fe-build package-theme
-	@if [ ! -d theme/dev ]; then mkdir -p theme/dev; fi
-	@if [ -d theme/dev ]; then rm -rf theme/dev/* ; fi
-	@cp -r dist/* theme/dev/
+	@if [ -e __everkm/theme/dev ]; then rm -rf __everkm/theme/dev; fi
+	@mkdir -p __everkm/theme/dev
+	@cp -r dist/* __everkm/theme/dev/
 
-
-bundle-theme: dist-theme
-	@cd theme && \
+# 打包 theme
+bundle-theme: 
+	@cd __everkm/theme && \
 		if [ -d yilog ]; then rm -rf yilog ; fi && \
 		mv dev yilog && \
 		zip -r yilog.zip ./yilog
