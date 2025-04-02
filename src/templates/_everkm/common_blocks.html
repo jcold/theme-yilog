@@ -3,16 +3,16 @@
 {% macro app_header(with_menu=false) %}
     <div class="flex-1 flex justify-between items-center px-4 py-2 lg:px-8">
         <div class="flex items-center">
-            {% if local_cfg_exist(key='/site/logo') %}
+            {% if has_config(key='/site/logo') %}
             <a href="{{base_url()}}/">
-                <img src="{{local_cfg(key='/site/logo') | safe}}" class="inline-block mr-2 w-8 h-8 font-medium" alt="{{t(text=" site
+                <img src="{{config(key='/site/logo') | safe}}" class="inline-block mr-2 w-8 h-8 font-medium" alt="{{t(text=" site
                     name")}}" />
             </a>
             {% endif %}
 
             <div>
-                <a  href="{{base_url()}}/" class="text-lg !text-gray-800 font-medium">{{local_cfg(key="/site/name")}}</a>
-                <span class="hidden lg:inline-block text-gray-600 text-xs">{{local_cfg(key="/site/slogan",
+                <a  href="{{base_url()}}/" class="text-lg !text-gray-800 font-medium">{{config(key="/site/name")}}</a>
+                <span class="hidden lg:inline-block text-gray-600 text-xs">{{config(key="/site/slogan",
                     default="")}}</span>
             </div>
         </div>
@@ -33,18 +33,18 @@
 
 
 {% macro primary_nav() %}
-    {% set navs = local_cfg(key="primary_nav", default=[]) %}
+    {% set navs = config(key="primary_nav", default=[]) %}
     {% for nav in navs %}
     <div class="flex items-center"><a href="{{nav.url|safe}}" class="link inline-block">{{nav.title}}</a></div>
     {% endfor %}
 {% endmacro %}
 
 {% macro embed_search(only_button=true) %}
-    {% if local_cfg_exist(key='/embed_search') %}
+    {% if has_config(key='/embed_search') %}
     <div class="inline-flex items-center">
-        <ekm-in-search app-id="{{local_cfg(key='/embed_search/app_id')}}" 
-                   api-key="{{local_cfg(key='/embed_search/api_key')}}"
-                   index="{{local_cfg(key='/embed_search/index')}}" 
+        <ekm-in-search app-id="{{config(key='/embed_search/app_id')}}" 
+                   api-key="{{config(key='/embed_search/api_key')}}"
+                   index="{{config(key='/embed_search/index')}}" 
                    only-button="{{only_button}}"
                    class="inline-flex" />
     </div>

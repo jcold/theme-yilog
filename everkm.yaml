@@ -1,4 +1,4 @@
-cfg:
+config:
   site:
     name: 道盒发布模板
     contact: hello@example.com

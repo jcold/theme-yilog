@@ -1,5 +1,5 @@
 ifneq (, $(shell echo $$DEBUG))
-  EKMP = "/Users/dayu/Coder/yiibox/daobox-server-next/wz-server/target/debug/everkm-publish"
+  EKMP = "/Users/dayu/Coder/everkm/everkm2/be/everkm-publish/target/debug/everkm-publish"
 else
   EKMP = ./node_modules/.bin/everkm-publish
 endif
@@ -15,20 +15,22 @@ tag:
 	
 dev:
 	@echo use ekmp $(EKMP)
-	@EVERKM_LOG=info \
+	@EVERKM_LOG=info,everkm_publish=debug \
 		$(EKMP) serve \
+		--work-dir ./demo_posts \
 		--dev-dir ./ \
 		--listen=0.0.0.0:9081
 
 work:
 	@EVERKM_LOG=info \
 		$(EKMP) serve \
-		--work-dir ./ \
+		--work-dir ./demo_posts \
 		--listen=0.0.0.0:9081
 
 build-pages:
 	@EVERKM_LOG=info \
 		$(EKMP) serve \
+		--work-dir ./demo_posts \
 		--dev-dir ./ \
 		--export
 
@@ -44,8 +46,8 @@ fe-build:
 dist: fe-build build-pages
 
 sync-config:
-	@cp everkm-theme.yaml content/post/_everkm-theme.inc.yaml
-	@cp everkm.yaml content/post/_everkm.inc.yaml
+	@cp everkm-theme.yaml demo_posts/_everkm-theme.inc.yaml
+	@cp everkm.yaml demo_posts/_everkm.inc.yaml
 
 
 preview:

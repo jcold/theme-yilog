@@ -3,11 +3,11 @@
 
 {% block body %}
 <div class="block-container space-y-6">
-    <h1 class="text-4xl font-extrabold mt-6"><a href="{{base_url()}}/">{{__cfg.site.name}}</a></h1>
+    <h1 class="text-4xl font-extrabold mt-6"><a href="{{base_url()}}/">{{__config.site.name}}</a></h1>
 
     {% set is_home = __qs | get(key="home", default="0") %}
     {% if is_home == "1" %}
-    <p class="text-[95%] text-black/60">{{__cfg.site.summary}}</p>
+    <p class="text-[95%] text-black/60">{{__config.site.summary}}</p>
     {% endif %}
 
 

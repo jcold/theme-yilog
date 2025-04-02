@@ -27,11 +27,11 @@
 
   {{doc.content_html | safe}}
 
-  {% if local_cfg_exist(key='/home_news/dir') %}
-  <h2 class="pb-1 border-b-2">{{local_cfg(key='/home_news/section_name', default='Latest')}}</h2>
-  {% set items = posts(dir=local_cfg(key="/home_news/dir"), recursive=true) %}
+  {% if has_config(key='/home_news/dir') %}
+  <h2 class="pb-1 border-b-2">{{config(key='/home_news/section_name', default='Latest')}}</h2>
+  {% set items = posts(dir=config(key="/home_news/dir"), recursive=true) %}
   <ol>
-    {% for doc in items | slice(end=local_cfg(key="/home_news/top_count", default=6)) %}
+    {% for doc in items | slice(end=config(key="/home_news/top_count", default=6)) %}
     <li class="">
       <a class="text-black/90"
         href="{{doc.url_path | safe}}?path={{doc.path | urlencode_strict}}&__tpl={{"details.html"|urlencode_strict}}"
@@ -40,15 +40,15 @@
       </a>
       {%if doc.weight > 0%}<span class="!text-red-500 mark-top"></span>{%endif%}
       <span class="text-[#2f353e] font-light text-[0.9em] number">
-        {{doc.update_at | date(format=local_cfg(key="date_format", default="%Y-%m-%d %H:%M:%S"))}}
+        {{doc.update_at | date(format=config(key="date_format", default="%Y-%m-%d %H:%M:%S"))}}
         {% if doc.date != doc.update_at %}<em>{{t(text="common: updated")}}</em>{% endif %}
       </span>
     </li>
     {% endfor %}
   </ol>
 
-  {% if local_cfg_exist(key="/home_news/more/link") %}
-  <a href="{{local_cfg(key='/home_news/more/link') | safe}}">{{local_cfg(key='/home_news/more/title',
+  {% if has_config(key="/home_news/more/link") %}
+  <a href="{{config(key='/home_news/more/link') | safe}}">{{config(key='/home_news/more/title',
     default='More')}} &raquo;</a>
   {% endif %}
   {% endif %}

@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>
-        {{doc.title}} | {{local_cfg(key="/site/name")}}
+        {{doc.title}} | {{config(key="/site/name")}}
     </title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -24,7 +24,7 @@
     <meta content="" name="description" />
     <meta http-equiv="Windows-Target" contect="_top" />
     {{app.prejs | default(value="") | safe}}
-    {{assets(type="css", section="main")}}
+    {{asset(type="css", section="main")}}
     <script>window.__everkm_lang = "{{ __lang | default(value='') }}"</script>
     <style></style>
 </head>
@@ -90,7 +90,7 @@
     <script>
         var daoboxAjaxPathSeg = "{{__qs.ajax | safe}}"
     </script>
-    {{ assets(section="main", type="js") }}
+    {{ asset(section="main", type="js") }}
     <script>window.everkm.bootstrap('book')</script>
     {% include "_everkm/prism.html" %}
 </body>
