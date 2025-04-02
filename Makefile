@@ -66,7 +66,7 @@ dist-theme: fe-build package-theme
 	@cp -r dist/* __everkm/theme/dev/
 
 # 打包 theme
-bundle-theme: 
+bundle-theme: dist-theme
 	@cd __everkm/theme && \
 		if [ -d yilog ]; then rm -rf yilog ; fi && \
 		mv dev yilog && \
