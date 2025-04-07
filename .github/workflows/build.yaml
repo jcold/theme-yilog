@@ -89,7 +89,7 @@ jobs:
         draft: false
         prerelease: true
         files: |
-          theme/yilog.zip
+          __everkm/theme/yilog.zip
 
 
   # notify:
