@@ -1,0 +1,280 @@
+<html>
+
+
+
+    <title>道盒发布模板</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta content="width=device-width,initial-scale=1.0" name="viewport">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta content="0" http-equiv="Expires">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Windows-Target" contect="_top">
+    
+    
+    <link rel="stylesheet" href="/assets/main.6ca56096.css">
+    
+    <script>window.__everkm_lang = "zh_CN"</script>
+
+
+
+    <div class="body-container">
+        
+        <div class="app-header border-b sticky top-0 z-10 w-full h-[3.5rem] overflow-hidden bg-white flex items-center">
+            
+    <div class="flex-1 flex justify-between items-center px-4 py-2 lg:px-8">
+        <div class="flex items-center">
+            
+
+            <div>
+                <a href="/" class="text-lg !text-gray-800 font-medium">道盒发布模板</a>
+                <span class="hidden lg:inline-block text-gray-600 text-xs"></span>
+            </div>
+        </div>
+        <div class="hidden md:flex space-x-3">
+            
+    
+    <div class="inline-flex items-center">
+        <ekm-in-search app-id="OXATQ3BVKY" index="yilog" class="inline-flex" api-key="68c319be5966ec1738662ecdf32d38f0" only-button="false">
+    </ekm-in-search></div>
+    
+
+            
+    
+    
+    <div class="flex items-center"><a href="/" class="link inline-block">Home</a></div>
+    
+    <div class="flex items-center"><a href="/blog/" class="link inline-block">Blog</a></div>
+    
+    <div class="flex items-center"><a class="link inline-block" href="/wiki/">Wiki</a></div>
+    
+
+        </div>
+
+        <div class="flex-shrink-0 ml-4 overflow-hidden md:hidden flex items-center gap-3">
+            
+    
+    <div class="inline-flex items-center">
+        <ekm-in-search index="yilog" class="inline-flex" app-id="OXATQ3BVKY" api-key="68c319be5966ec1738662ecdf32d38f0" only-button="true">
+    </ekm-in-search></div>
+    
+
+            
+            
+<div class="w-6 h-6 flex items-center justify-center active:bg-gray-200 text-[1.4rem]" id="drawer">
+    <span class="icon-[material-symbols--dehaze-rounded]"></span>
+</div>
+
+            
+        </div>
+
+    </div>
+
+        </div>
+        <!-- 左导航栏 -->
+        <div class="hidden fixed top-0 w-3/4 max-w-xs px-4 z-20 overscroll-contain border-r overflow-y-auto h-screen md:h-[calc(100vh-var(--app-header-height))] md:w-full md:max-w-none md:top-[3.5rem] md:sticky md:hidden" id="aside-nav">
+            <div class="drawer-body space-y-4">
+                <div class="md:hidden space-y-1.5 border-b pb-3">
+                    
+    
+    
+    <div class="flex items-center"><a class="link inline-block" href="/">Home</a></div>
+    
+    <div class="flex items-center"><a href="/blog/" class="link inline-block">Blog</a></div>
+    
+    <div class="flex items-center"><a href="/wiki/" class="link inline-block">Wiki</a></div>
+    
+
+                </div>
+            </div>
+        </div>
+        
+
+        
+<div class="mx-auto mb-10 px-6 lg:px-8 markdown-body pt-4">
+  
+
+  <!-- <h1 class="text-center">home</h1> -->
+
+  <h1>道盒默认模板<a href="#dao-he-mo-ren-mo-ban" name="dao-he-mo-ren-mo-ban" class="heading-anchor"></a></h1>
+<h2>主要配置参数<a name="zhu-yao-pei-zhi-can-shu" class="heading-anchor" href="#zhu-yao-pei-zhi-can-shu"></a></h2>
+<pre><code class="language-yaml">config:
+  site:
+    name: 道盒发布模板
+    contact: hello@example.com
+    # beian.zh_CN: 中ICP备20230828
+  
+  # 每页数量
+  page_size: 12
+
+  # 界面默认翻译语言
+  default_lang: zh_CN
+  # 日期格式, 默认: `%Y-%m-%d %H:%M:%S`
+  date_format: "%Y-%m-%d %H:%M"
+
+  # 主导航
+  primary_nav.zh_CN:
+    - title: Home
+      url: /
+    - title: Blog
+      url: /blog/
+    - title: Wiki
+      url: /wiki/
+
+  # 首页展示最新
+  home_news:
+    section_name: Blog Demo
+    dir: /blog/
+    top_count: 5
+    more:
+      title: More
+      link: ./blog/
+
+  # Algolia 及时搜索配置参数
+  embed_search:
+    app_id: 1N74YC70XF
+    api_key: 95bb37e3122ee9cb57a8ee0abbd14409
+    index: yilog
+
+# 站点结构配置
+sitemap:
+  channel_name: 首页
+  children:
+    - path: posts/
+      channel_name: 文章
+      qs:
+        __tpl: details.html
+    - path: wiki/
+      channel_name: WIKI
+      qs:
+        __tpl: wiki.html
+      children:
+        - path: /index.html
+          qs:
+            __tpl: wiki.html
+            home: 1
+            path: /_wiki/index.md
+
+# 由 markdown 文件生成 URL 的规则。多用于内联文档的文件地址转换 URL。
+map_url:
+  - dir: /_wiki/
+    url: /wiki/{{slug}}.html</code></pre>
+<h2>使用文档<a href="#shi-yong-wen-dang" class="heading-anchor" name="shi-yong-wen-dang"></a></h2>
+<ol>
+<li><a href="https://publish.everkm.cn/guide/">使用指南</a> / <a href="https://publish.everkm.com/guide/">Guide</a></li>
+<li><a href="https://publish.everkm.cn/docs/">模板语法</a> / <a href="https://publish.everkm.com/docs/">Docs</a></li>
+<li><a href="https://publish.everkm.cn/download.html">下载</a> / <a href="https://publish.everkm.com/download.html">Download</a></li>
+</ol>
+<h2>Wiki<a name="wiki" href="#wiki" class="heading-anchor"></a></h2>
+<ol>
+<li>👉 <a href="/wiki/">Wiki</a> 进入</li>
+</ol>
+
+
+  
+  <h2 class="pb-1 border-b-2">Blog Demo</h2>
+  
+  <ol>
+    
+    <li class="">
+      <a href="/blog/2025/001-life-is-to-be-whole-sheng-ming-zai-yu-wan-zheng.html" target="_blank" class="text-black/90">
+        001 Life is to be whole 《生命在于完整》
+      </a>
+      
+      <span class="text-[#2f353e] font-light text-[0.9em] number">
+        2025-04-07 08:57
+        
+      </span>
+    </li>
+    
+    <li class="">
+      <a href="/blog/2025/002-home-jia.html" target="_blank" class="text-black/90">
+        002 Home 《家》
+      </a>
+      <span class="!text-red-500 mark-top"></span>
+      <span class="text-[#2f353e] font-light text-[0.9em] number">
+        2025-04-07 08:57
+        
+      </span>
+    </li>
+    
+    <li class="">
+      <a href="/blog/2025/003-too-dear-for-the-whistle-de-bu-chang-shi-de-shao-zi.html" class="text-black/90" target="_blank">
+        003 Too Dear for the Whistle 《得不偿失的哨子》
+      </a>
+      
+      <span class="text-[#2f353e] font-light text-[0.9em] number">
+        2025-04-07 08:57
+        
+      </span>
+    </li>
+    
+    <li class="">
+      <a href="/blog/2025/004-youth-qing-chun.html" target="_blank" class="text-black/90">
+        004 Youth 《青春》
+      </a>
+      
+      <span class="text-[#2f353e] font-light text-[0.9em] number">
+        2025-04-07 08:57
+        
+      </span>
+    </li>
+    
+    <li class="">
+      <a href="/blog/2025/005-on-punctuality-lun-shou-shi.html" class="text-black/90" target="_blank">
+        005 On Punctuality 《论守时》
+      </a>
+      
+      <span class="text-[#2f353e] font-light text-[0.9em] number">
+        2025-04-07 08:57
+        
+      </span>
+    </li>
+    
+  </ol>
+
+  
+  <a href="./blog/">More »</a>
+  
+  
+
+</div>
+
+
+        
+        <div class="footer text-center space-y-2">
+    <div class="footer-nav text-sm">
+        
+    </div>
+    <div class="!text-gray-500 text-xs flex gap-3 justify-center">
+        
+        
+        
+    </div>
+</div>
+        
+    </div>
+
+
+    
+
+    <script src="/assets/main.6ca56096.js"></script>
+    
+<script>window.everkm.bootstrap('home')</script>
+
+
+    <link rel="stylesheet" href="https://jsdelivr.daobox.cc/combine/npm/prismjs@1.29.0/themes/prism-solarizedlight.css,npm/prismjs@1.29.0/plugins/toolbar/prism-toolbar.min.css">
+<script src="https://jsdelivr.daobox.cc/combine/npm/prismjs@1.29.0/components/prism-core.min.js,npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js,npm/prismjs@1.29.0/plugins/toolbar/prism-toolbar.min.js,npm/prismjs@1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+<script>
+  Prism.plugins.autoloader.languages_path = 'https://jsdelivr.daobox.cc/npm/prismjs@1.29.0/components/';
+</script>
+    
+
+
+</html>

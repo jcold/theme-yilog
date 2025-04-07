@@ -1,0 +1,27 @@
+{
+  "assets/171.0eb0cfd4.css": "assets/171.0eb0cfd4.css",
+  "assets/171.0eb0cfd4.js": "assets/171.0eb0cfd4.js",
+  "assets/243.c2957b67.js": "assets/243.c2957b67.js",
+  "assets/243.c2957b67.js.LICENSE.txt": "assets/243.c2957b67.js.LICENSE.txt",
+  "assets/48.939187ab.js": "assets/48.939187ab.js",
+  "assets/505.e4f7d040.css": "assets/505.e4f7d040.css",
+  "assets/505.e4f7d040.js": "assets/505.e4f7d040.js",
+  "assets/664.db4fac3e.css": "assets/664.db4fac3e.css",
+  "assets/664.db4fac3e.js": "assets/664.db4fac3e.js",
+  "assets/817.fd4ef86d.js": "assets/817.fd4ef86d.js",
+  "assets/main.6ca56096.js.LICENSE.txt": "assets/main.6ca56096.js.LICENSE.txt",
+  "entrypoints": {
+    "main": {
+      "assets": {
+        "css": [
+          "assets/main.6ca56096.css"
+        ],
+        "js": [
+          "assets/main.6ca56096.js"
+        ]
+      }
+    }
+  },
+  "main.css": "assets/main.6ca56096.css",
+  "main.js": "assets/main.6ca56096.js"
+}
