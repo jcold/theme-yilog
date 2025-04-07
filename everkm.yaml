@@ -32,8 +32,8 @@ config:
 
   # Algolia 及时搜索配置参数
   embed_search:
-    app_id: 1N74YC70XF
-    api_key: 95bb37e3122ee9cb57a8ee0abbd14409
+    app_id: OXATQ3BVKY
+    api_key: 68c319be5966ec1738662ecdf32d38f0
     index: yilog
 
 # 站点结构配置

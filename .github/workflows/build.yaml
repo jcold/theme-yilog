@@ -66,12 +66,12 @@ jobs:
         disable_globbing: true
         create_branch: true
 
-    - name: push search index
-      run: |
-        export ALGOLIA_APP_ID="${{ secrets.ALGOLIA_APP_ID }}"
-        export ALGOLIA_API_KEY="${{ secrets.ALGOLIA_API_KEY }}"
-        ./node_modules/.bin/ekmp-algolia --index-name yilog reset --languages zh --languages en
-        ./node_modules/.bin/ekmp-algolia --index-name yilog walk --url-base https://yilog.theme.everkm.com/ --dir dist
+    # - name: push search index
+    #   run: |
+    #     export ALGOLIA_APP_ID="${{ secrets.ALGOLIA_APP_ID }}"
+    #     export ALGOLIA_API_KEY="${{ secrets.ALGOLIA_API_KEY }}"
+    #     ./node_modules/.bin/ekmp-algolia --index-name yilog reset --languages zh --languages en
+    #     ./node_modules/.bin/ekmp-algolia --index-name yilog walk --url-base https://yilog.theme.everkm.com/ --dir dist
 
 
     - name: build theme
